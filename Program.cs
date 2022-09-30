@@ -30,6 +30,11 @@ public class Program
                 getTenEmployees();
                 MenuIniziale();
                 break;
+            // Stampa Prodotti
+            case 3:
+                getTenProducts();
+                MenuIniziale();
+                break;
         }
 
     }
@@ -83,6 +88,8 @@ public class Program
         Console.WriteLine("Cosa vuoi fare?");
         Console.WriteLine("1 - Stampa i primi 10 Clienti");
         Console.WriteLine("2 - Stampa i primi 10 Dipendenti");
+        Console.WriteLine("3 - Stampa i primi 10 Prodotti");
+
         Console.WriteLine(" ");
 
         int sceltaMenu = Convert.ToInt32(Console.ReadLine());
@@ -101,6 +108,24 @@ public class Program
                 Console.Write(" - " + employee.Name + " ");
                 Console.Write(employee.Surname + " ");
                 Console.Write("(" + employee.Level + ") \n");
+
+            }
+        }
+    }
+    
+    static void getTenProducts()
+    {
+        using (EcommerceContext db = new EcommerceContext())
+        {
+            // Read
+            List<Product> products = db.Products.OrderBy(employee => employee.Name).Take(10).ToList<Product>();
+            Console.WriteLine("----- LISTA PRODOTTI -----");
+            foreach (var product in products)
+            {
+                Console.Write(" - " + product.Name + " ");
+                Console.Write(product.Price + "€");
+                Console.Write(" (" + product.Description + ")\n");
+                
 
             }
         }
