@@ -4,18 +4,24 @@
     <projectFile>csharp-ecommerce-db.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f7061a7-9b6f-4630-a665-7bf98cc08cf7" name="Changes" comment="Repo Init">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.csharp-ecommerce-db/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Customer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Employee.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Orders.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Products.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csharp-ecommerce-db.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/csharp-ecommerce-db.csproj" afterDir="false" />
+    <list default="true" id="1f7061a7-9b6f-4630-a665-7bf98cc08cf7" name="Changes" comment="Aggiunte Classi">
+      <change afterPath="$PROJECT_DIR$/Migrations/20220930125821_InitialCreate.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20220930125821_InitialCreate.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/EcommerceContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.csharp-ecommerce-db/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.csharp-ecommerce-db/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Customer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Orders.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Payments.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Products.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,6 +43,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pathVariables",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -67,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1664539712264</updated>
-      <workItem from="1664539715508" duration="1463000" />
+      <workItem from="1664539715508" duration="3857000" />
     </task>
     <task id="LOCAL-00001" summary="Repo Init">
       <created>1664539738109</created>
@@ -76,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664539738109</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Aggiunte Classi">
+      <created>1664541443689</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664541443689</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +117,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Repo Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Repo Init" />
+    <MESSAGE value="Aggiunte Classi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunte Classi" />
   </component>
 </project>

@@ -16,6 +16,7 @@ public class Customer
     [Required]
     public string Email { get; set; }   
 
+    // Relazione con Lista Ordini
     public List<Order> Orders { get; set; } 
 }
 

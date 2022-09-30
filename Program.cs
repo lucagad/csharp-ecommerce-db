@@ -1,3 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using csharp_ecommerce_db;
 
-Console.WriteLine("Hello, World!");
+public class Program
+{
+    static void Main()
+    {
+        using (EcommerceContext db = new EcommerceContext()) 
+        {
+            // Create
+            Employee nuovoDipendente = new Employee { Name = "Luca", Surname = "Bianchi", Level = "Stagista" };
+            db.Add(nuovoDipendente);
+            db.SaveChanges();
+            
+        }
+        
+    }
+}

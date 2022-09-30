@@ -14,6 +14,7 @@ public class Employee
     public string Surname { get; set; }   
     public string Level { get; set; }   
 
+    // Relazione con Lista Ordini
     public List<Order> Orders { get; set; } 
 
 }

@@ -15,6 +15,7 @@ public class Product
     [Required]
     public double Price { get; set; }   
     
+    // Relazione con Lista Ordini
     public List<Order> Orders { get; set; }
 
 }

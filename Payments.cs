@@ -15,6 +15,7 @@ public class Payment
     [Required]
     public double Amount { get; set; }   
     
+    // Relazione con Ordine
     public int OrderId { get; set; }
     public Order Order { get; set; }
 }
