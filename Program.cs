@@ -10,43 +10,30 @@ public class Program
         switch (scelta)
         {
             case "si":
-                DefaultValue();
+                defaultValue();
                 break;
             case "no":
                 break;
         }
         
-        
-        
-        
-        using (EcommerceContext db = new EcommerceContext()) 
+        int sceltaMenu = MenuIniziale();
+
+        switch (sceltaMenu)
         {
-            // Read
-            List<Employee> employees = db.Employees.OrderBy(employee => employee.Name).ToList<Employee>();
-            Console.WriteLine("----- LISTA DIPENDENTI -----");
-            foreach (var employee in employees)
-            {
-                Console.Write(" - " +employee.Name+" ");
-                Console.Write(employee.Surname + " ");
-                Console.Write("(" + employee.Level + ") \n");
-
-            }
-            
-            // Read
-            List<Customer> customers = db.Customers.OrderBy(customer => customer.Name).ToList<Customer>();
-            Console.WriteLine("----- LISTA CLIENTI -----");
-            foreach (var customer in customers)
-            {
-                Console.Write(" - " + customer.Name+" ");
-                Console.Write(customer.Surname + " ");
-                Console.Write("(" + customer.Email + ") \n");
-
-            }
-            
+            // Stampa Clienti
+            case 1:
+                getTenCustomers();
+                MenuIniziale();
+                break;
+            // Stampa Dipendenti
+            case 2:
+                getTenEmployees();
+                MenuIniziale();
+                break;
         }
-        
+
     }
-    static void DefaultValue()
+    static void defaultValue()
     {
     
         using (EcommerceContext db = new EcommerceContext()) 
@@ -87,5 +74,54 @@ public class Program
             
         }
     }
+
+    // Menu inziale
+    static int MenuIniziale()
+    {
+        Console.WriteLine(" ");
+        Console.WriteLine("-- MENU INIZIALE -- ");
+        Console.WriteLine("Cosa vuoi fare?");
+        Console.WriteLine("1 - Stampa i primi 10 Clienti");
+        Console.WriteLine("2 - Stampa i primi 10 Dipendenti");
+        Console.WriteLine(" ");
+
+        int sceltaMenu = Convert.ToInt32(Console.ReadLine());
+
+        return sceltaMenu;
+    }
+    static void getTenEmployees()
+    {
+        using (EcommerceContext db = new EcommerceContext())
+        {
+            // Read
+            List<Employee> employees = db.Employees.OrderBy(employee => employee.Name).Take(10).ToList<Employee>();
+            Console.WriteLine("----- LISTA DIPENDENTI -----");
+            foreach (var employee in employees)
+            {
+                Console.Write(" - " + employee.Name + " ");
+                Console.Write(employee.Surname + " ");
+                Console.Write("(" + employee.Level + ") \n");
+
+            }
+        }
+    }
+    
+    static void getTenCustomers()
+    {
+        using (EcommerceContext db = new EcommerceContext())
+        {
+            // Read
+            List<Customer> customers = db.Customers.OrderBy(customer => customer.Name).Take(10).ToList<Customer>();
+            Console.WriteLine("----- LISTA CLIENTI -----");
+            foreach (var customer in customers)
+            {
+                Console.Write(" - " + customer.Name+" ");
+                Console.Write(customer.Surname + " ");
+                Console.Write("(" + customer.Email + ") \n");
+
+            }
+        }
+    }
+    
 }
 
